@@ -15,17 +15,46 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <title>shift-card Demo</title>
     <script src="../../webcomponentsjs/webcomponents-lite.min.js"></script>
     <link rel="import" href="../shift-card.html">
+    <style is="custom-style" >
+    :root{
+        /*--shift-card-width:500px;
+        --shift-card-height:500px;*/
+    }
+
+      .main{
+        position: relative;
+        margin-left: 50px;
+
+      }
+    </style>
+
   </head>
   <body unresolved>
 
-    <p>An example of <code>&lt;shift-card&gt;</code>:</p>
+    <div class="main">
+        <shift-card header="Vacation">
+        <div class="content">
+          <img src="http://media.idownloadblog.com/wp-content/uploads/2013/11/Jeffs-Office.jpg" alt="">
+        </div>
+        <div class="footer">
+          It's been a great vacation
+        </div>
+        </shift-card>
 
-    <p>Make words! <button id="saybtn">Say Something</button></p>
-    <p>Make lasers! <button id="laserbtn">Fire lasers</button></p>
+          <shift-card header="Hello World">
+          <div class="content">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+             Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+          <div class="footer">
+          <paper-button> Yes</paper-button>
+          <paper-button>No</paper-button>
+          </div>
+          </shift-card>
+    </div>
 
-    <shift-card author='{"name": "Lord Meowser", "image": "http://lorempixel.com/g/300/200/cats/"}' fancy>
-      <h2>Hello shift-card</h2>
-    </shift-card>
 
     <script>
       var seedElement = document.querySelector('shift-card');
